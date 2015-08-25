@@ -6,9 +6,21 @@ Refer to the lab handouts for details about each assignment.  This file provides
 
 ## Repository Organization
 
-Clone this repository to your local machine using the following command:
+In the directory that you want your project files, clone this repository to your local machine using the following command:
 
     $ git clone https://github.com/bechang/pppl-labs.git
+    
+In this document, the
+
+    $ 
+
+simply stands for the shell prompt.
+
+The above command will create the directory ``pppl-labs.`` Change into that directory
+
+    $ cd pppl-labs
+    
+All other commands in this document will assume that your are in this directory.
 
 The files for a single lab are committed on a different branch. For example, to switch to the Lab 1 branch, use the following command:
 
@@ -58,11 +70,27 @@ The project is designed to work with [Scala](http://www.scala-lang.org/) is 2.10
 
 ### IntelliJ Import
 
-To import the project files into IntelliJ, go to
+From the IntelliJ splash screen on start up, first configure your Java software development kit (Java SDK) in IntelliJ
 
-    File > New > Project from Existing Sources ...
+    Configure > Project Defaults > Project Structure
 
-and then select the directory with the project files and hit Ok. On the next dialog, select
+Under Project SDK, select an SDK from the list (either 1.7 or 1.8 are fine). If there are no listed, you will have to select the directory with your SDK from
+
+    New ...
+
+On the CU CS Virtual Machine, follow this procedure:
+
+    New ... > JDK
+    
+And the select the following directory:
+
+    /usr/lib/jvm/default-java
+
+Then, again from the splash 
+
+    Import Project
+
+and then select the directory with the project files (i.e., ``pppl-labs``) and hit Ok. On the next dialog, select
 
     Import project from external model > SBT > Next
 
@@ -71,11 +99,7 @@ If you do not see SBT, then you did not select the project files.
 On the next dialog, select
 
     Use auto-import
-    
-You will also need to provide the Project SDK, select the Java 1.7 SDK that should be installed on the CU CS VM. This can alternatively be done from the IntelliJ welcome screen, under Configure > Project Defaults > Project Structure). In the CU CS VM, the path to the Java 1.7 SDK is
-
-    /usr/lib/jvm/java-1.7.0-openjdk-amd64/lib
-    
+      
 If you want to be able to navigate to definitions in external sources, you can select to download sources and docs before hitting Finish.
 
 Here is the IntelliJ documentation on [import](https://www.jetbrains.com/idea/help/getting-started-with-sbt.html#import_project).
