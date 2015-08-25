@@ -66,7 +66,7 @@ We will support [IntelliJ IDEA](https://www.jetbrains.com/idea/) on the [CU CS V
 
 After setting up the CU CS VM, you will need to [download](https://www.jetbrains.com/idea/download/) and install IntelliJ IDEA. The Community Edition will be fine.
 
-The project is designed to work with [Scala](http://www.scala-lang.org/) is 2.10. We will standardize on 2.10.5 (the latest Scala 2.10). For the most part, you do not need to worry about the Scala version because we are using ``sbt`` for building.
+The project is designed to work with [Scala](http://www.scala-lang.org/) is 2.10. We will standardize on 2.10.5 (the latest Scala 2.10). The project files have not yet been ported to Scala 2.11. For the most part, you do not need to worry about the Scala version because we are using ``sbt`` for building.
 
 ### IntelliJ Import
 
