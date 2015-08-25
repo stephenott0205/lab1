@@ -10,7 +10,7 @@ Clone this repository to your local machine using the following command:
 
     $ git clone https://github.com/bechang/pppl-labs.git
 
-Each lab is committed on a different branch. For example, to switch to the Lab 1 branch, use the following command:
+The files for a single lab are committed on a different branch. For example, to switch to the Lab 1 branch, use the following command:
 
     $ git checkout --track origin/lab1
     
