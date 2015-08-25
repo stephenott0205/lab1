@@ -66,9 +66,15 @@ and then select the directory with the project files and hit Ok. On the next dia
 
     Import project from external model > SBT > Next
 
-If you do not see SBT, then you did not select the project files. On the next dialog, select
+If you do not see SBT, then you did not select the project files. 
+
+On the next dialog, select
 
     Use auto-import
+    
+You will also need to provide the Project SDK, select the Java 1.7 SDK that should be installed on the CU CS VM. This can alternatively be done from the IntelliJ welcome screen, under Configure > Project Defaults > Project Structure). In the CU CS VM, the path to the Java 1.7 SDK is
+
+    /usr/lib/jvm/java-1.7.0-openjdk-amd64/lib
     
 If you want to be able to navigate to definitions in external sources, you can select to download sources and docs before hitting Finish.
 
