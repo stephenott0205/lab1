@@ -160,7 +160,7 @@ Or you can specify, specifically
 
     $ sbt test-only Lab1Spec
     
-For your convenience, we have script
+For your convenience, we have a script
 
     $ ./testlab1.sh
     
