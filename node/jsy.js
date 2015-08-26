@@ -20,8 +20,10 @@ const jsy = {
 };
 
 const jsyprogram = (function () {
+    const node = process.argv[0]
+    const jsyjs = process.argv[1]
     const usage = function () {
-	console.error("Usage: node jsy.js program.jsy");
+	console.error("Usage: " + node + " " + jsyjs + " program.jsy");
 	process.exit(1);
     };
 
