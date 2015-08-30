@@ -70,7 +70,13 @@ The project is designed to work with [Scala](http://www.scala-lang.org/) is 2.10
 
 ### IntelliJ Import
 
-From the IntelliJ splash screen on start up, first configure your Java software development kit (Java SDK) in IntelliJ
+From the IntelliJ splash screen on start up, first make sure that the Scala plugin is installed. Go to
+
+    Configure > Settings or Preferences (depending on your platform) > Plugins
+    
+In the plugins list, make sure ``Scala`` is installed.
+
+Then back at the splash screen, configure your Java software development kit (Java SDK) in IntelliJ
 
     Configure > Project Defaults > Project Structure
 
