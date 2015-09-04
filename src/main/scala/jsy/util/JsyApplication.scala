@@ -48,7 +48,7 @@ abstract class JsyApplication {
         val encoding = java.nio.charset.StandardCharsets.UTF_8
         val ansstring = new String(Files.readAllBytes(ans.toPath), encoding)
         val outstring = new String(outstream.toString(encoding.toString))
-        (ansstring == outstring, "Computed output does not match expected output.")
+        (ansstring == outstring, s"Computed output does not match expected output.\nComputed:\n${outstring}\nExpected:\n${ansstring}")
       }
     }
     k(file, ans, assertion)
