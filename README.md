@@ -16,7 +16,7 @@ In this document, the
 
 simply stands for the shell prompt.
 
-The above command will create the directory ``pppl-labs.`` Change into that directory
+The above command will create the directory `pppl-labs`. Change into that directory
 
     $ cd pppl-labs
     
@@ -58,15 +58,15 @@ For Lab 1, the most important project files are shown below.
 └── testlab1.sh  (run your Lab1Spec)
 ```
 
-The files for you to edit and submit will be in ``src/main/jsy/student``.
+The files for you to edit and submit will be in `src/main/jsy/student`.
 
 ## Scala Development Tools
 
-We will support [IntelliJ IDEA](https://www.jetbrains.com/idea/) on the [CU CS Virtual Machine](https://foundation.cs.colorado.edu/vm/) for development in this course. You are welcome to use any development environment, but we may not be able answer questions in your particular environment.
+We support [IntelliJ IDEA](https://www.jetbrains.com/idea/) on the [CU CS Virtual Machine](https://foundation.cs.colorado.edu/vm/) for development in this course. You are welcome to use any development environment, but we may not be able answer questions in your particular environment.
 
 After setting up the CU CS VM, you will need to [download](https://www.jetbrains.com/idea/download/) and install IntelliJ IDEA. The Community Edition will be fine.
 
-The project is designed to work with [Scala](http://www.scala-lang.org/) is 2.10. We will standardize on 2.10.5 (the latest Scala 2.10). The project files have not yet been ported to Scala 2.11. For the most part, you do not need to worry about the Scala version because we are using ``sbt`` for building.
+The project is designed to work with [Scala](http://www.scala-lang.org/) is 2.10. We will standardize on 2.10.5 (the latest Scala 2.10). The project files have not yet been ported to Scala 2.11. For the most part, you do not need to worry about the Scala version because we are using sbt for building.
 
 ### IntelliJ Import
 
@@ -74,13 +74,13 @@ From the IntelliJ splash screen on start up, first make sure that the Scala plug
 
     Configure > Settings or Preferences (depending on your platform) > Plugins
     
-In the plugins list, make sure ``Scala`` is installed.
+In the plugins list, make sure `Scala` is installed.
 
 Then back at the splash screen, configure your Java software development kit (Java SDK) in IntelliJ
 
     Configure > Project Defaults > Project Structure
 
-Under Project SDK, select an SDK from the list (either 1.7 or 1.8 are fine). If there are no listed, you will have to select the directory with your SDK from
+Under Project SDK, select an SDK from the list (either 1.7 or 1.8 are fine but not 1.6 or earlier). If there are no listed, you will have to select the directory with your SDK from
 
     New ...
 
@@ -96,7 +96,7 @@ Then, again from the splash
 
     Import Project
 
-and then select the directory with the project files (i.e., ``pppl-labs``) and hit Ok. On the next dialog, select
+and then select the directory with the project files (i.e., `pppl-labs`) and hit Ok. On the next dialog, select
 
     Import project from external model > SBT > Next
 
@@ -148,17 +148,17 @@ In IntelliJ, you can start a Scala console with the project files available by s
 
     Tools > Run Scala Console
     
-However, for quick experimentation in IntelliJ, it is more convenient to use a Scala Worksheet (e.g., ``src/scala/jsy/student/Lab1Worksheet.sc``).
+However, for quick experimentation in IntelliJ, it is more convenient to use a Scala Worksheet (e.g., `src/scala/jsy/student/Lab1Worksheet.sc`).
 
 ## ScalaTest
 
 We will be using the [ScalaTest](http://www.scalatest.org/) framework for unit testing.  Using this framework, we practice test-driven development (TDD), a standard practice in industry. You do not need to explicitly download ScalaTest.
 
-We provide some unit tests in ``src/test/scala/Lab1Spec.scala`` to drive your implementation.  To run tests, right-click on the Lab1Spec object in the Project view and select
+We provide some unit tests in `src/test/scala/Lab1Spec.scala` to drive your implementation.  To run tests, right-click on the Lab1Spec object in the Project view and select
 
     Run 'Lab1Spec'
     
-You can also run all test objects under the ``src/test`` directory via
+You can also run all test objects under the `src/test` directory via
 
     $ sbt test
     
@@ -174,7 +174,7 @@ to run Lab1Spec using sbt.
 
 ## Your Javascripty Interpreter
 
-You can run your Javascripty interpreter with a file (e.g., tests in ``src/test/resources``) in IntelliJ by setting up a Run/Debug Configuration.
+You can run your Javascripty interpreter with a file (e.g., tests in `src/test/resources`) in IntelliJ by setting up a Run/Debug Configuration.
 
     Run > Edit Configurations ...
 
@@ -193,3 +193,76 @@ For quick experimentation, it is more convenient to use the Scala Console window
 We have a script to run Javascripty files through Node.js (as JavaScript):
 
     $ ./jsy.sh test.jsy
+
+
+## Tool Installation Summaries
+
+### CU CS VM
+
+1. Start with the [CU CS VM](https://foundation.cs.colorado.edu/vm/).
+2. Install the CSCI 3155 package:
+
+        $ sudo apt-get update
+        $ sudo apt-get install cu-cs-csci-3155
+
+3. Install [IntelliJ IDEA](https://www.jetbrains.com/idea/download/).
+
+### Ubuntu Linux
+
+You can also use the CSCI 3155 package from native Ubuntu installation ([instructions](https://foundation.cs.colorado.edu/vm/#alt)).
+
+### Mac OS
+
+Our tools sbt, Node.js, Java SDK, and IntelliJ are available from [Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io/). Once you have Homebrew and Homebrew Cask, you can install the latest JDK with
+
+    $ brew cask install java
+
+But you can also install specifically JDK 1.7 with
+
+    $ brew tap caskroom/versions
+    $ brew cask install java7
+
+Then, you need these commands for the remaining tools:
+
+    $ brew install sbt
+    $ brew install node
+    $ brew cask install intellij-idea-ce
+
+## Troubleshooting
+
+### Why does SBT does not show up when I try to import into IntelliJ?
+
+Here are some reasons that we have observed.
+
+* In your `pppl-labs` folder, if you do not see `build.sbt`, then it is likely that you have not yet checked-out the `lab1` branch.
+
+* You need to have sbt installed. If you're using the CU CS VM, you 
+
+        $ sudo apt-get update
+        $ sudo apt-get install cu-cs-csci-3155
+
+* In your IntelliJ installation, you need to have the Scala plugin installed. From the splash screen,
+
+        Configure > Plugins
+
+### What if /usr/lib/jvm/default-java is not listed on my system?
+
+JDK 1.7 or 1.8 should be fine. We saw on some VMs that there is a JDK 1.7 listed under `/usr/lib/jvm` even though there was no `default-java` link.
+
+### What if I can't run Lab1 or Lab1Spec from IntelliJ?
+
+It could be that you did not import your project as an SBT project. Try to import the project again. You can remove any of IntelliJ's meta-data by deleting the `.idea/` directory in `pppl-labs/`.
+
+### Wow, the VM is really slow on my machine.
+
+We have multiple layers of virtualization with the Java VM running on top of the CU CS VM, so it is quite resource intensive. You can try to install the tools natively.
+ 
+By default, your VM is probably configured to use 2 GB of memory. If possible, I recommend increasing the available memory to your VM to at least 4 GB. To do that in Virtual Box, make sure your VM is shut down (not in the saved stated but actually powered off). Then, go to
+
+     Settings > System > Base Memory
+
+While not officially supported, we will try to help with native installs. Please feel free to ask for help here on the forum and help by contributing your experience.
+
+### Why is the editor in IntelliJ is not allowing me to write anything.
+ 
+Do you have the Vim Emulator mode turned on? Look under `Tools > Vim Emulator`. If you don't know what Vim is, then you should turn this option off.
