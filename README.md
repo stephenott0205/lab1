@@ -209,11 +209,11 @@ We have a script to run Javascripty files through Node.js (as JavaScript):
 
 ### Ubuntu Linux
 
-You can also use the CSCI 3155 package from native Ubuntu installation ([instructions](https://foundation.cs.colorado.edu/vm/#alt)).
+You can also use the CSCI 3155 package from a native Ubuntu installation ([instructions](https://foundation.cs.colorado.edu/vm/#alt)).
 
 ### Mac OS
 
-Our tools sbt, Node.js, Java SDK, and IntelliJ are available from [Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io/). Once you have Homebrew and Homebrew Cask, you can install the latest JDK with
+The tools needed for the project (sbt, Node.js, Java SDK, and IntelliJ) are available from [Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io/). Once you have Homebrew and Homebrew Cask, you can install the latest JDK with
 
     $ brew cask install java
 
