@@ -8,7 +8,7 @@ Refer to the lab handouts for details about each assignment.  This file provides
 
 In the directory that you want your project files, clone this repository to your local machine using the following command:
 
-    $ git clone https://github.com/bechang/pppl-labs.git
+    $ git clone -b lab1 https://github.com/bechang/pppl-labs.git
     
 In this document, the
 
@@ -16,15 +16,13 @@ In this document, the
 
 simply stands for the shell prompt.
 
-The above command will create the directory `pppl-labs`. Change into that directory
+The above command will create the directory `lab1`. Change into that directory
 
-    $ cd pppl-labs
+    $ cd lab1
     
 All other commands in this document will assume that your are in this directory.
 
-The files for a single lab are committed on a different branch. For example, to switch to the Lab 1 branch, use the following command:
-
-    $ git checkout --track origin/lab1
+Note that the files for a single lab are committed on different branches in the repository.
     
 ## Project Files Organization
 
