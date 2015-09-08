@@ -152,9 +152,9 @@ However, for quick experimentation in IntelliJ, it is more convenient to use a S
 
 We will be using the [ScalaTest](http://www.scalatest.org/) framework for unit testing.  Using this framework, we practice test-driven development (TDD), a standard practice in industry. You do not need to explicitly download ScalaTest.
 
-We provide some unit tests in `src/test/scala/Lab1Spec.scala` to drive your implementation.  To run tests, right-click on the Lab1Spec object in the Project view and select
+We provide some unit tests in `src/test/scala/Lab1Spec.scala` to drive your implementation.  To run tests, right-click on the Lab1Suite object in the Project view and select
 
-    Run 'Lab1Spec'
+    Run 'Lab1Suite'
     
 You can also run all test objects under the `src/test` directory via
 
@@ -162,13 +162,13 @@ You can also run all test objects under the `src/test` directory via
     
 Or you can specify, specifically
 
-    $ sbt test-only Lab1Spec
+    $ sbt test-only Lab1Suite
     
 For your convenience, we have a script
 
     $ ./testlab1.sh
     
-to run Lab1Spec using sbt.
+to run Lab1Suite using sbt.
 
 ## Your Javascripty Interpreter
 
