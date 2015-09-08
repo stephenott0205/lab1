@@ -8,15 +8,15 @@ Refer to the lab handouts for details about each assignment.  This file provides
 
 In the directory that you want your project files, clone this repository to your local machine using the following command:
 
-    $ git clone -b lab1 https://github.com/bechang/pppl-labs.git
-    
+    $ git clone -b lab1 https://github.com/bechang/pppl-labs.git lab1
+
 In this document, the
 
     $ 
 
 simply stands for the shell prompt.
 
-The above command will create the directory `lab1`. Change into that directory
+The above command will create the directory `lab1` (based on the last argument). Change into that directory
 
     $ cd lab1
     
