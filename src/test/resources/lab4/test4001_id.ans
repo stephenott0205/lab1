@@ -1,0 +1,44 @@
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab3.scala:107: match may not be exhaustive.
+[warn] It would fail on the following inputs: Binary(_, _, _), Call(_, _), ConstDecl(_, _, _), If(_, _, _), Unary(_, _)
+[warn]     e match {
+[warn]     ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:231: patterns after a variable pattern cannot match (SLS 8.1.1)
+[warn]       case _ => ???
+[warn]            ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:233: unreachable code due to variable pattern on line 231
+[warn]         v1 match {
+[warn]         ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:246: unreachable code due to variable pattern on line 231
+[warn]       case _ => ???
+[warn]                 ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:249: unreachable code due to variable pattern on line 231
+[warn]       case Print(e1) => Print(step(e1))
+[warn]                              ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:251: unreachable code due to variable pattern on line 231
+[warn]       case Unary(uop, e1) => ???
+[warn]                              ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:252: unreachable code due to variable pattern on line 231
+[warn]       case _ => ???
+[warn]                 ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:254: unreachable code due to variable pattern on line 231
+[warn]       case Call(v1 @ Function(_, _, _, _), args) => ???
+[warn]                                                     ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:255: unreachable code due to variable pattern on line 231
+[warn]       case Call(e1, args) => ???
+[warn]                              ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:257: unreachable code due to variable pattern on line 231
+[warn]       case _ => ???
+[warn]                 ^
+[warn] /Users/bec/vc/pl/courses/csci3155/2015-fall/pppl-labdev/src/main/scala/jsy/student/Lab4.scala:265: unreachable code due to variable pattern on line 231
+[warn]       case _ => throw StuckError(e)
+[warn]                 ^
+[warn] 11 warnings found
+# Type checking ...
+------------------------------------------------------------
+Type checking: Call(Function(None,List((x,TNumber)),None,Var(x)),List(N(4.0))) ...
+Type: number
+number
+# Stepping ...
+##    0: Call(Function(None,List((x,TNumber)),None,Var(x)),List(N(4.0)))
+##    1: N(4.0)
+4.0
