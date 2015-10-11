@@ -159,18 +159,15 @@ object Lab4 extends jsy.util.JsyApplication {
         }
       }
       case Call(e1, args) => typ(e1) match {
-        case TFunction(params, tret) if (params.length == args.length) => {
+        case TFunction(params, tret) if (params.length == args.length) =>
           (params, args).zipped.foreach {
             ???
           };
           tret
-        }
         case tgot => err(tgot, e1)
       }
-      case Obj(fields) =>
-        ???
-      case GetField(e1, f) =>
-        ???
+      case Obj(fields) => ???
+      case GetField(e1, f) => ???
     }
   }
   
@@ -210,7 +207,8 @@ object Lab4 extends jsy.util.JsyApplication {
       case Var(y) => ???
       case ConstDecl(y, e1, e2) => ???
         /***** Cases needing adapting from Lab 3 */
-      case Function(p, params, tann, e1) => ???
+      case Function(p, params, tann, e1) =>
+        ???
       case Call(e1, args) => ???
         /***** New cases for Lab 4 */
       case Obj(fields) => ???
@@ -226,7 +224,7 @@ object Lab4 extends jsy.util.JsyApplication {
     e match {
       /* Base Cases: Do Rules */
       case Print(v1) if isValue(v1) => println(pretty(v1)); Undefined
-      /***** Cases needing adapting from Lab 3. Make sure to replace the case _ => ???. */
+        /***** Cases needing adapting from Lab 3. Make sure to replace the case _ => ???. */
       case Unary(Neg, v1) if isValue(v1) => ???
       case _ => ???
       case Call(v1, args) if isValue(v1) && (args forall isValue) =>
@@ -240,14 +238,14 @@ object Lab4 extends jsy.util.JsyApplication {
               case Some(x1) => ???
             }
           }
-          case _ => throw new StuckError(e)
+          case _ => throw StuckError(e)
         }
         /***** New cases for Lab 4. Make sure to replace the case _ => ???. */
       case _ => ???
         
       /* Inductive Cases: Search Rules */
       case Print(e1) => Print(step(e1))
-        /* Cases from Lab 3. Make sure to replace the case _ => ???. */
+        /***** Cases from Lab 3. Make sure to replace the case _ => ???. */
       case Unary(uop, e1) => ???
       case _ => ???
         /***** Cases needing adapting from Lab 3 */
@@ -269,8 +267,8 @@ object Lab4 extends jsy.util.JsyApplication {
   
   /* External Interfaces */
   
-  this.debug = true // comment this out or set to false if you don't want print debugging information
-  
+  //this.debug = true // uncomment this if you want to print debugging information
+
   def inferType(e: Expr): Typ = {
     if (debug) {
       println("------------------------------------------------------------")
@@ -303,7 +301,9 @@ object Lab4 extends jsy.util.JsyApplication {
 
   // Convenience to pass in a jsy expression as a string.
   def iterateStep(s: String): Expr = iterateStep(Parser.parse(s))
-  
+
+  this.keepGoing = true // comment this out if you want to stop at first exception when processing a file
+
   // Interface for main
   def processFile(file: java.io.File) {
     if (debug) {
@@ -312,18 +312,29 @@ object Lab4 extends jsy.util.JsyApplication {
       println("Parsing ...")
     }
     
-    val expr =
+    val e1 =
       handle(None: Option[Expr]) {Some{
         Parser.parseFile(file)
       }} getOrElse {
         return
       }
-    
-    handle() {
-      val t = inferType(expr)
+
+    val welltyped = handle(false) {
+      println("# Type checking ...")
+      val t = Lab4.inferType(e1)
+      println(pretty(t))
+      true
     }
-    
+    if (!welltyped) return
+
     handle() {
+      println("# Stepping ...")
+      def loop(e: Expr, n: Int): Expr = {
+        println("## %4d: %s".format(n, e))
+        if (isValue(e)) e else loop(Lab4.step(e), n + 1)
+      }
+      val v1 = loop(e1, 0)
+      println(pretty(v1))
     }
   }
 

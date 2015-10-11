@@ -48,7 +48,6 @@ class Lab4InterpreterSpec extends FlatSpec {
 
   // Probably want to write some more tests for typeInfer, substitute, and step.
 
-
 }
 
 // The next bit of code runs a test for each .jsy file in src/test/resources/lab4.
