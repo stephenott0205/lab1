@@ -386,8 +386,6 @@ object Lab5 extends jsy.util.JsyApplication {
   // Convenience to pass in a jsy expression as a string.
   def iterateStep(s: String): Expr = iterateStep(removeInterfaceDecl(jsy.lab5.Parser.parse(s)))
   
-  this.keepGoing = true // comment this out if you want to stop at first exception when processing a file
-
   // Interface for main
   def processFile(file: java.io.File) {
     if (debug) {
