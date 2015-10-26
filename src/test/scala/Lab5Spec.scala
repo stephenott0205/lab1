@@ -12,7 +12,7 @@ class Lab5ExercisesSpec extends FlatSpec {
 
   "rename" should "rename from left-to-right using fresh" in {
     val e1 = parse("const a = 1; a")
-    val e1p = parse("const x1 = 1; x0")
+    val e1p = parse("const x1 = 1; x1")
     val e2 = parse("const a = 2; a")
     val e2p = parse("const x2 = 2; x2")
     val e = Decl(MConst, "a", e1, e2)
@@ -41,8 +41,9 @@ class Lab5InterpreterSpec extends FlatSpec {
   "DoNeg" should "return the negation of a number value" in {
     val e1 = N(5)
     val e2 = Unary(Neg, e1)
-    assertResult( (memempty, N(-5)) ) {
-      step(e2)(memempty)
+    assertResult( N(-5) ) {
+      val (_, r) = step(e2)(memempty)
+      r
     }
   }
 
