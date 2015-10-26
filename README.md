@@ -162,9 +162,9 @@ You can also run all test objects under the `src/test` directory via
     
 Or you can specify, specifically
 
-    $ sbt test-only Lab1Suite
-    
-For your convenience, we have a script
+    $ sbt "test-only Lab1Suite"
+
+Note that the quotes are important when passing arguments to sbt from the command-line (though they are optional when running in the sbt interactive console). For your convenience, we have a script
 
     $ ./testlab1.sh
     
@@ -178,7 +178,7 @@ You can run your Javascripty interpreter with a file (e.g., tests in `src/test/r
 
 It may be easier to run your Javascripty interpreter on the command-line.
 
-    $ sbt runMain jsy.student.Lab1 <arguments>
+    $ sbt "runMain jsy.student.Lab1 <arguments>"
 
 Or for your convenience,
 
