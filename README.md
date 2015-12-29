@@ -1,8 +1,22 @@
 # Principles and Practice in Programming Languages Labs
 
-This repository contains the student project files.
+This repository contains student project files.
 
-Refer to the lab handouts for details about each assignment.  This file provides some information to help you get started with setting up your development environment.
+Refer to the [lab handouts](https://www.cs.colorado.edu/~bec/courses/csci3155/assignments.html) for details about each assignment.  This readme provides information to help you get started with setting up your development environment.
+
+If you are an instructor looking to re-use these materials, please contact me.
+
+## Author and Maintainer
+
+[Bor-Yuh Evan Chang](https://www.cs.colorado.edu/~bec)
+
+## Integrity of the Course Materials
+
+The development effort in the course materials, including these lab assignments, the exercises, and the exams, is significant. You agree that you will not share any course materials publicly. The course materials, include your or anyone else's solutions to the lab assignments, exercises, and exams. In particular, you agree not to post your solutions to the lab assignments in a public source code repository, such as public Github repositories. Please use private source code repositories for your work.
+
+### License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License</a>.
 
 ## Repository Organization
 
