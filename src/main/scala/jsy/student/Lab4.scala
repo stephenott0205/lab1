@@ -322,7 +322,7 @@ object Lab4 extends jsy.util.JsyApplication {
     val welltyped = handle(false) {
       println("# Type checking ...")
       val t = Lab4.inferType(e1)
-      println(pretty(t))
+      println("## " + pretty(t))
       true
     }
     if (!welltyped) return
