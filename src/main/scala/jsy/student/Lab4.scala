@@ -319,21 +319,16 @@ object Lab4 extends jsy.util.JsyApplication {
       }} getOrElse {
         return
       }
-    if (testCog) {
-      val welltyped = handle(false) {
-        println("# Type checking ...")
-        val t = Lab4.inferType(e1)
+    val welltyped = handle(false) {
+      println("# Type checking ...")
+      val t = Lab4.inferType(e1)
+      if (testCOG) {
         println("## " + pretty(t))
-        true
       }
-    }
-    else {
-      val welltyped = handle(false) {
-        println("# Type checking ...")
-        val t = Lab4.inferType(e1)
+      else {
         println(pretty(t))
-        true
-      } 
+      }
+      true
     }
     if (!welltyped) return
 
