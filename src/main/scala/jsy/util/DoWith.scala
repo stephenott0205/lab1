@@ -1,4 +1,4 @@
-package jsy.lab5
+package jsy.util
 
 /*
  * DoWith is a data structure that holds a function that returns a result of

@@ -1,4 +1,7 @@
 package jsy.lab5
+
+import jsy.util.DoWith
+
 import scala.util.parsing.input.Positional
 
 /**

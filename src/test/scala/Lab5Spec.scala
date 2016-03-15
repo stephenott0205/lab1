@@ -1,8 +1,9 @@
+import jsy.util.DoWith
 import org.scalatest._
 import jsy.tester.JavascriptyTester
 import jsy.lab5._
 import jsy.lab5.ast._
-import jsy.lab5.DoWith._
+import DoWith._
 import jsy.lab5.Parser.parse
 
 import jsy.student.Lab5

@@ -3,7 +3,8 @@ package jsy.student
 object Lab5 extends jsy.util.JsyApplication {
   import jsy.lab5.ast._
   import jsy.lab5._
-  import jsy.lab5.DoWith._
+  import jsy.util.DoWith
+  import jsy.util.DoWith._
 
   /*
    * CSCI 3155: Lab 5

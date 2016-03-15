@@ -10,6 +10,11 @@ import jsy.lab5.Parser.parse
 
 // Imports the ast nodes
 import jsy.lab5.ast._
+import jsy.lab5._
+
+// Imports DoWith
+import jsy.util.DoWith
+import jsy.util.DoWith._
 
 // Imports all of the functions form jsy.student.Lab2 (your implementations in Lab2.scala)
 import jsy.student.Lab5._
